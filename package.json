@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "benchmark:small": "node benchmark.js --scenario small",
-    "benchmark:medium": "node benchmark.js --scenario medium",
-    "benchmark:large": "node benchmark.js --scenario large",
-    "benchmark:nested": "node benchmark.js --scenario nested",
+    "benchmark:small:node": "node benchmark.js --scenario small",
+    "benchmark:small:bun": "bun --bun benchmark.js --scenario small",
+    "benchmark:medium:node": "node benchmark.js --scenario medium",
+    "benchmark:medium:bun": "bun --bun benchmark.js --scenario medium",
+    "benchmark:large:node": "node benchmark.js --scenario large",
+    "benchmark:large:bun": "bun --bun benchmark.js --scenario large",
+    "benchmark:nested:node": "node benchmark.js --scenario nested",
+    "benchmark:nested:bun": "bun --bun benchmark.js --scenario nested",
     "benchmark": "pnpm benchmark:nested"
   },
   "private": true,
