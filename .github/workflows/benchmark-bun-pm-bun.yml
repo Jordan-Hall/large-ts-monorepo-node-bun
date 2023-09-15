@@ -1,4 +1,4 @@
-name: Node NX benchmark
+name: Bun benchmark with bun install and node installed
 
 on:
   - push
@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: setup bun
+        uses: oven-sh/setup-bun@v1
       - uses: pnpm/action-setup@v2
         with:
           version: 8
@@ -17,13 +19,13 @@ jobs:
         with:
           node-version: '20'
       - name: Install dependencies
-        run: pnpm install
+        run: bun install
       - name: Run small benchmark
-        run: pnpm benchmark:small:node
+        run: bun run benchmark:small:bun
       - name: Run medium benchmark
-        run: pnpm benchmark:medium:node
+        run: bun run benchmark:medium:bun
       - name: Run large benchmark
-        run: pnpm benchmark:large:node
+        run: bun run benchmark:large:bun
       - name: Run nested benchmark
-        run: pnpm benchmark:nested:node
+        run: bun run benchmark:nested:bun
       
