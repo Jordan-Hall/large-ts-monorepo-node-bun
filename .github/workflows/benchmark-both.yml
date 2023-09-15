@@ -1,4 +1,4 @@
-name: Bun benchmark with bun install and node installed
+name: Benchmark both
 
 on:
   - push
