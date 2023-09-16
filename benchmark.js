@@ -43,7 +43,7 @@ function logTitle(message) {
 }
 
 function clearOutput() {
-  cp.execSync('rm -rf dist');
+  // cp.execSync('rm -rf dist');
 }
 function clearCache() {
   cp.execSync('nx reset');
@@ -76,8 +76,8 @@ function runBenchmark(task, options = {}) {
 
   let totalTime = 0;
   for (let i = 0; i < NUMBER_OF_RUNS; ++i) {
-    (options.clearOutput ?? true) && clearOutput();
-    (options.clearCache ?? true) && clearCache();
+    // (options.clearOutput ?? true) && clearOutput();
+    // (options.clearCache ?? true) && clearCache();
     options.prepare && options.prepare();
 
     console.log(`Run ${i + 1}...`);
