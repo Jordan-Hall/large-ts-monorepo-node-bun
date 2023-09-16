@@ -639,10 +639,10 @@ console.table([
 
 console.log('\n');
 
-console.log(`Average build time in node for leaf dependency affected packages (~${affectedLeafDepInfo.percentage}%) with @nx/js:tsc is: ${benchmarkTimes.node.normal.affectedLeafDep}ms`);
-console.log(`Average build time in node for leaf dependency affected packages (~${affectedLeafDepInfo.percentage}%) with @nx/js:tsc using batch execution time is: ${benchmarkTimes.node.batch.affectedLeafDep}ms`);
-console.log(`Average build time in bun for leaf dependency affected packages (~${affectedLeafDepInfo.percentage}%) with @nx/js:tsc is: ${benchmarkTimes.bun.normal.affectedLeafDep}ms`);
-console.log(`Average build time in bun for leaf dependency affected packages (~${affectedLeafDepInfo.percentage}%) with @nx/js:tsc using batch execution time is: ${benchmarkTimes.bun.batch.affectedLeafDep}ms`);
+console.log(`Average build time in node for project with a leaf dependency affected with @nx/js:tsc is: ${benchmarkTimes.node.normal.affectedLeafDep}ms`);
+console.log(`Average build time in node for project with a leaf dependency affected with @nx/js:tsc using batch execution time is: ${benchmarkTimes.node.batch.affectedLeafDep}ms`);
+console.log(`Average build time in bun for project with a leaf dependency affected with @nx/js:tsc is: ${benchmarkTimes.bun.normal.affectedLeafDep}ms`);
+console.log(`Average build time in bun for project with a leaf dependency affected with @nx/js:tsc using batch execution time is: ${benchmarkTimes.bun.batch.affectedLeafDep}ms`);
 
 console.log(dynamicComparison(
     benchmarkTimes.node.normal.affectedLeafDep, 

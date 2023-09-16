@@ -14,6 +14,7 @@
     "tslib": "^2.5.3"
   },
   "devDependencies": {
+    "@nx-bun/nx": "^1.0.0",
     "@nx/devkit": "16.6.0",
     "@nx/js": "16.6.0",
     "@nx/linter": "16.6.0",
@@ -26,4 +27,3 @@
     "yargs-parser": "^21.1.1"
   }
 }
-

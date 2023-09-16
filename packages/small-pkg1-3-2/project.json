@@ -14,6 +14,18 @@
         "assets": ["packages/small-pkg1-3-2/*.md"],
         "clean": false
       }
+    },
+    "bun-build": {
+      "executor": "@nx-bun/nx:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/small-pkg1-3-2",
+        ""
+        "main": "packages/small-pkg1-3-2/src/index.ts",
+        "tsConfig": "packages/small-pkg1-3-2/tsconfig.lib.json",
+        "assets": ["packages/small-pkg1-3-2/*.md"],
+        "clean": false
+      }
     }
   },
   "tags": []
