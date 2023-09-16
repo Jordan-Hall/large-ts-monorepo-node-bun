@@ -1,4 +1,4 @@
-name: Benchmark both
+name: Benchmark both - bun as drop in replacement for Node
 
 on:
   - push
@@ -21,23 +21,16 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Run small benchmark - bun
-        run: bun run benchmark:small:bun
       - name: Run small benchmark - node
         run: pnpm benchmark:small:node
     
-      - name: Run medium benchmark -bun
-        run: bun run benchmark:medium:bun
+      
       - name: Run medium benchmark - node
         run: pnpm benchmark:medium:node
 
-      - name: Run large benchmark - bun
-        run: bun run benchmark:large:bun
       - name: Run large benchmark - node
         run: pnpm benchmark:large:node
       
-      - name: Run nested benchmark - bun
-        run: bun run benchmark:nested:bun
       - name: Run nested benchmark - node
         run: pnpm benchmark:nested:node
       
